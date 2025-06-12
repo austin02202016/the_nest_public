@@ -46,6 +46,8 @@ This repository contains a simple transcript agent that allows users to query an
    python -c "from tools.transcript_agent import get_transcripts; print(get_transcripts('Origami'))"
    ```
 
+3. Go to your UI and ask a question concerning the company domain you entered. For example, if the company domain was "origamiagents.com," you can ask, "What was the summary for the last call with Origami?"
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
