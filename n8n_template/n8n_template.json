@@ -1,5 +1,5 @@
 {
-  "name": "Circleback -> n8n",
+  "name": "My workflow 12",
   "nodes": [
     {
       "parameters": {
@@ -10,10 +10,10 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        -100,
-        0
+        220,
+        -140
       ],
-      "id": "f8e4dc9c-0cfc-49dc-a9b2-57871e2b257d",
+      "id": "11906c6d-1714-4c7f-be00-8b7ebcf50119",
       "name": "Webhook",
       "webhookId": "YOUR_WEBHOOK_ID"
     },
@@ -64,10 +64,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        240,
-        0
+        560,
+        -140
       ],
-      "id": "99da7d9f-2670-4972-9b26-1663116a3678",
+      "id": "de8f7154-41ff-4b40-9f59-903009826ecc",
       "name": "Upload to Supabase"
     },
     {
@@ -77,13 +77,14 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        80,
-        0
+        400,
+        -140
       ],
-      "id": "784e862a-1a55-49b0-b221-7d6ac581742e",
+      "id": "56309dfe-32d4-40e6-a4d0-e03616dcd6ab",
       "name": "Code"
     }
   ],
+  "pinData": {},
   "connections": {
     "Webhook": {
       "main": [
@@ -108,14 +109,13 @@
       ]
     }
   },
-  "active": true,
+  "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "YOUR_VERSION_ID",
+  "versionId": "",
   "meta": {
-    "instanceId": "YOUR_INSTANCE_ID"
+    "instanceId": "e000c1d03f5e051464163d65d4571c0de0e6138f295d892ba2fc4d168113836e"
   },
-  "id": "YOUR_WORKFLOW_ID",
   "tags": []
-} 
+}
