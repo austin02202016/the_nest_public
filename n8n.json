@@ -1,0 +1,13 @@
+{
+  "parameters": {
+    "jsCode": "// Get the Circleback payload\nconst payload = $('Webhook').first().json.body;\nconst segments = payload.transcript || [];\n\n// 1) Stringify the transcript segments\nconst transcriptsStr = JSON.stringify(\n  segments.map(s => ({\n    speaker: s.speaker,\n    text: s.text,\n    timestamp: s.timestamp,\n  }))\n);\n\n// 2) Find team member (POC)\nconst teamAttendee = (payload.attendees || []).find(a =>\n  a.email && a.email.endsWith('YOUR_EMAIL_DOMAIN')\n);\nconst POC = teamAttendee?.name || '';\n\n// 3) Filter out bots and internal attendees\nconst isValidGuest = (email) => {\n  return (\n    email &&\n    !email.endsWith('YOUR_EMAIL_DOMAIN') &&\n    !email.endsWith('@circleback.ai') &&\n    !email.match(/@.*\\.calendar\\.google\\.com$/)\n  );\n};\n\n// 4) Find the first valid guest\nconst guest = (payload.attendees || []).find(a => isValidGuest(a.email));\n\n// 5) Extract company domain\nconst company = guest?.email?.split('@')[1] || 'unknown';\n\n// 6) Emit result for Supabase\nreturn [{\n  json: {\n    organization: payload.organization || 'Default Organization',\n    company,\n    transcripts: transcriptsStr,\n    id: payload.id,\n    POC,\n  }\n}];"
+  },
+  "type": "n8n-nodes-base.code",
+  "typeVersion": 2,
+  "position": [
+    80,
+    0
+  ],
+  "id": "784e862a-1a55-49b0-b221-7d6ac581742e",
+  "name": "Code"
+} 
