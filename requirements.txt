@@ -1,2 +1,7 @@
 openai==1.79.0
 supabase==2.13.0
+agno
+python-dotenv
+fastapi
+uvicorn
+sqlalchemy
