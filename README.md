@@ -18,8 +18,8 @@ This repository contains a simple transcript agent that allows users to query an
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/austin02202016/the_nest_public.git
+   cd the_nest_public
    ```
 
 2. Install the required dependencies:
